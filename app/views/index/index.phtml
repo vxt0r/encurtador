@@ -1,0 +1,18 @@
+<main>
+    <form action="/shortener" method="POST">
+        <label>Insira uma URL</label>
+        <input type="text" name="url">
+        <button type="submit">Encurtar</button>
+    </form>
+
+    <section>
+        <?php foreach($this->view->data as $data){ ?>
+            <div class="item">
+                <a href="<?php echo $this->view->url .$data['id']?>" target="_blank" rel="noopener noreferrer">
+                    <?php echo $this->view->url .$data['id']?>
+                </a>
+                <span><?php echo $data['url'] ?></span>
+            </div>
+        <?php } ?>
+    </section>
+</main>
