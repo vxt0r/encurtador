@@ -21,7 +21,7 @@ class Route extends Bootstrap{
         );
 
         $routes['redirect'] = array(
-            'route' => '/redirect',
+            'route' => '/r',
             'controller' => 'indexController',
             'action' =>  'redirect'
         );

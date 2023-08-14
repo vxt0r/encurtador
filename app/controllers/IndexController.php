@@ -11,7 +11,7 @@ class IndexController extends Action{
     public function index(){
         $shortener = Container::getModel('Shortener');
         $this->view->data = $shortener->getURLS();
-        $this->view->url = 'http://localhost:8080/redirect?id=';
+        $this->view->url = 'http://localhost:8080/r?id=';
         $this->render('index','layout');
     }
 
