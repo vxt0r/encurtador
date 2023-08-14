@@ -49,3 +49,8 @@ section{
     padding: 0.5em;
     margin-bottom: 1.5em;
 }
+
+.remove-link{
+    color: rgb(255, 0, 100);
+    margin-left: 1em;
+}

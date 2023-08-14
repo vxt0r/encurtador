@@ -36,4 +36,16 @@ class Shortener extends Model{
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    /**
+     * @param string|int
+     * @return void
+     */
+    public function delete($id)
+    {
+        $query = 'DELETE FROM urls WHERE id = ?';
+        $stmt = $this->db->prepare($query);
+        $stmt->bindValue(1,$id);
+        $stmt->execute();
+    }
 }

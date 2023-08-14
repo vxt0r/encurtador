@@ -1,7 +1,9 @@
 # Encurtador de URLs
 ### PHP, MySQL, HTML e CSS
-<a href="https://youtu.be/cR7Fzwg5Nng" target="_blank" rel="noopener noreferrer">Veja um vídeo demonstrativo</a>
+<a href="https://youtu.be/lw1RHy4zZa8" target="_blank" rel="noopener noreferrer">Veja um vídeo demonstrativo</a>
+
 #### Como usar
+
 **Criar um arquivo Config.php na pasta app, com as credenciais do banco de dados (MySQL)**
     
     define('DB',[
@@ -18,7 +20,7 @@
         url varchar(255) not null
     );
 
-**E rodar o servidor**
+**Instalar as dependências e rodar o servidor**
 
     composer install
     cd public
