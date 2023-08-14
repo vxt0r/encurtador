@@ -20,5 +20,6 @@
 
 **E rodar o servidor**
 
+    composer install
     cd public
     php -S localhost:8080 
