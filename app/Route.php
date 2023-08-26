@@ -26,6 +26,12 @@ class Route extends Bootstrap{
             'action' =>  'redirect'
         );
 
+        $routes['remove'] = array(
+            'route' => '/remove',
+            'controller' => 'indexController',
+            'action' =>  'remove'
+        );
+
         $this->setRoutes($routes);
     }
 
