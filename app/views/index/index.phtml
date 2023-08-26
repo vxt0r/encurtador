@@ -1,5 +1,5 @@
 <main>
-    <form action="/shortener" method="POST">
+    <form action="/shortener" method="POST" class="form-url">
         <label>Insira uma URL</label>
         <input type="text" name="url">
         <button type="submit">Encurtar</button>
@@ -11,10 +11,16 @@
                 <a href="<?php echo $this->view->url .$data['id']?>" target="_blank" rel="noopener noreferrer">
                     <?php echo $this->view->url .$data['id']?>
                 </a>
-                <div>
+
+                <div class="item-info">
                     <span><?php echo $data['url'] ?></span>
-                    <a href='?remove=<?php echo $data['id']?>' class="remove-link">Apagar</a>
+    
+                    <form action="/remove" method="POST">
+                        <input type="hidden" name="id">
+                        <button type="submit">Deletar</button>   
+                    </form>
                 </div>
+            
             </div>
         <?php } ?>
     </section>
