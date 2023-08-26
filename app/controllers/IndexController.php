@@ -11,15 +11,15 @@ class IndexController extends Action{
     public function index(){
 
         $shortener = Container::getModel('Shortener');
-
-        if(isset($_GET['remove'])){
-            $shortener->delete($_GET['remove']);
-            header('location:/');
-        }
-
         $this->view->data = $shortener->getURLS();
         $this->view->url = 'http://localhost:8080/r?id=';
         $this->render('index','layout');
+    }
+
+    public function remove(){
+        $shortener = Container::getModel('Shortener');
+        $shortener->delete($_POST['id']);
+        header('location:/');
     }
 
     public function shortener(){
