@@ -5,16 +5,16 @@ body{
     background-color: #B0C4DE;
 }
 
-form{
+.form-url{
     margin: 3em;
     text-align: center;
 }
 
-form input, main, .item{
+.form-url input, main, .item{
     border-radius: 6px;
 }
 
-form input{
+.form-url input{
     width: 16em;
     height: 2em;
     margin: 0.2em;
@@ -50,7 +50,12 @@ section{
     margin-bottom: 1.5em;
 }
 
-.remove-link{
-    color: rgb(255, 0, 100);
-    margin-left: 1em;
+.item-info{
+    display: flex;
+}
+
+.item-info button {
+    color: #000;
+    margin-left: 8px;
+    background-color: #DC3545;
 }
